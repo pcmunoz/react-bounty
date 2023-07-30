@@ -1,12 +1,11 @@
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { pages } from "../../constant";
 import { SeparationBox } from "./common";
-import { menuFullPageButton, menuFullPageEndBox, name } from "./styles";
+import { menuFullPageButton, menuFullPageEndBox, menuFullSeparator, name } from "./styles";
 
 const MenuFull = () => {
   return (
@@ -16,7 +15,7 @@ const MenuFull = () => {
       </Typography>
       <SeparationBox />
       <Box sx={menuFullPageEndBox}>
-        {pages.map((page) => (
+        {pages.map((page, index) => (
           <Fragment key={`button-${page.key}`}>
             <Button
               component={Link}
@@ -26,7 +25,7 @@ const MenuFull = () => {
             >
               {page.name}
             </Button>
-            <Divider orientation="vertical" />
+            {index < pages.length - 1 && <Typography sx={menuFullSeparator}>|</Typography>}
           </Fragment>
         ))}
       </Box>

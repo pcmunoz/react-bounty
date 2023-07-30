@@ -1,0 +1,1 @@
+export const DescriptionSection = { height: "calc(30%)", backgroundColor: "lightgray", padding: "16px" }

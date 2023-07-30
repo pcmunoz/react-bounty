@@ -35,20 +35,18 @@ const ImageSlider = () => {
     <Box component="section" sx={{ height: "calc(40%)" }}>
       {SliderData.map((slide, index) => {
         return (
-          <>
-            <Box
-              key={index}
-              sx={{
-                height: "100%",
-                width: "100%",
-                display: index === current ? "block" : "none",
-              }}
-            >
-              {index === current && (
-                <img src={slide.image} alt="travel image" style={{ width: "100%", height: "100%" }} />
-              )}
-            </Box>
-          </>
+          <Box
+            key={index}
+            sx={{
+              height: "100%",
+              width: "100%",
+              display: index === current ? "block" : "none",
+            }}
+          >
+            {index === current && (
+              <img src={slide.image} alt="travel image" style={{ width: "100%", height: "100%" }} />
+            )}
+          </Box>
         );
       })}
       <Typography

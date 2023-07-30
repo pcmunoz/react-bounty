@@ -25,3 +25,5 @@ export const menuBarEndBox = { display: { xs: "flex", md: "none" } }
 
 export const menuBarMenu = { display: { xs: "block", md: "none" }, }
 
+export const menuFullSeparator = { padding: "6px", color: "black", marginTop: "16px" }
+
