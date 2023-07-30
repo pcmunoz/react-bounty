@@ -1,17 +1,11 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-
-const footerBoxSx = {
-  py: 3,
-  px: 2,
-  mt: "auto",
-  backgroundColor: "lightgray",
-};
+import { footerBox } from "./styles";
 
 const Footer = () => {
   return (
-    <Box component="footer" sx={footerBoxSx}>
+    <Box component="footer" sx={footerBox}>
       <Container maxWidth="lg">
         <Typography variant="body2" color="text.secondary">
           {`© ${new Date().getFullYear()} Bounty Media Pte. Ltd, Singapore.`}

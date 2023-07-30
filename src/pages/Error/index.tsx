@@ -1,3 +1,5 @@
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 import { isRouteErrorResponse, useRouteError } from "react-router-dom";
 import Layout from "../../components/Layout";
 
@@ -19,13 +21,13 @@ const Error = () => {
 
   return (
     <Layout>
-      <div id="error-page">
-        <h1>Oops!</h1>
-        <p>Sorry, an unexpected error has occurred.</p>
-        <p>
+      <Box id="error-page">
+        <Typography variant="h1">Oops!</Typography>
+        <Typography>Sorry, an unexpected error has occurred.</Typography>
+        <Typography>
           <i>{errorMessage}</i>
-        </p>
-      </div>
+        </Typography>
+      </Box>
     </Layout>
   );
 };
