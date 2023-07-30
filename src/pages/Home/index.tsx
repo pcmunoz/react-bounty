@@ -1,12 +1,12 @@
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/system";
-import ImageSlider from "./ImageSlider";
+import ImageSlider from "../../components/ImageSlider";
 import { DescriptionSection } from "./styles";
 
 const Home = () => {
   return (
     <>
-      <ImageSlider />
+      <ImageSlider wrapperSx={{ height: "calc(40%)" }} />
       <Box component="section" sx={DescriptionSection}>
         <Box sx={{ padding: "16px" }}>
           <Typography variant="h4" align="center" sx={{ fontWeight: 500 }}>

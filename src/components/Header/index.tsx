@@ -11,7 +11,7 @@ const Header = () => {
     <AppBar position="static" sx={appBar}>
       <Container maxWidth="lg">
         <Toolbar disableGutters>
-          <BountyIcon />
+          <BountyIcon sx={{ pr: "8px" }} />
           <MenuBar />
           <MenuFull />
         </Toolbar>
