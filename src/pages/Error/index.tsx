@@ -1,15 +1,14 @@
 import { isRouteErrorResponse, useRouteError } from "react-router-dom";
+import Layout from "../../components/Layout";
 
-const ErrorPage = () => {
+const Error = () => {
   const error = useRouteError();
   let errorMessage: string;
-  console.log("tgus", isRouteErrorResponse(error));
-  console.log(error);
 
   if (isRouteErrorResponse(error)) {
     // error is type `ErrorResponse`
     errorMessage = error.error?.message || error.statusText;
-  } else if (error instanceof Error) {
+  } else if (error instanceof TypeError) {
     errorMessage = error.message;
   } else if (typeof error === "string") {
     errorMessage = error;
@@ -19,14 +18,16 @@ const ErrorPage = () => {
   }
 
   return (
-    <div id="error-page">
-      <h1>Oops!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
-      <p>
-        <i>{errorMessage}</i>
-      </p>
-    </div>
+    <Layout>
+      <div id="error-page">
+        <h1>Oops!</h1>
+        <p>Sorry, an unexpected error has occurred.</p>
+        <p>
+          <i>{errorMessage}</i>
+        </p>
+      </div>
+    </Layout>
   );
 };
 
-export default ErrorPage;
+export default Error;
